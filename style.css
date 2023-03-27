@@ -1,0 +1,248 @@
+@font-face {
+    font-family: ubuntu-bold;
+    src: url('assets/fonts/Ubuntu-Bold.ttf');
+}
+@font-face {
+    font-family: ubuntu-medium;
+    src: url('assets/fonts/Ubuntu-Medium.ttf');
+}
+@font-face {
+    font-family: ubuntu-regular;
+    src: url('assets/fonts/Ubuntu-Regular.ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+input {
+    font-size: 1rem;
+}
+input:focus {
+    outline: none;
+}
+body {
+    background-color: hsl(206, 94%, 87%);
+    height: 100vh;
+    font-family: ubuntu-regular;
+}
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.card {
+    background-color: #fff;
+    width: minmax(70%, 50%);
+    margin: auto;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    gap: 4rem;
+}
+.sidebar {
+    background: url('assets/images/bg-sidebar-desktop.svg') no-repeat center center / cover;
+    border-radius: inherit;
+    padding: inherit;
+    flex-basis: 250px;
+    width: 250px;
+    color: #fff;
+    height: 500px;
+}
+.sidebar li {
+    display: flex;
+    margin-block: 1.6rem;
+    align-items: center;
+}
+.number {
+    border-radius: 50%;
+    border: 1px solid #fff;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form {
+    width: 450px;
+    /* height: 450px; */
+}
+.active {
+    background-color: rgb(2, 209, 209);
+}
+.text {
+    text-transform: uppercase;
+    font-size: .7rem;
+    margin-left: 10px;
+}
+.hide{
+    display: none;
+}
+.personal-info,
+.plan-selection,
+.addons,
+.finish {
+    padding: 2rem 2rem 0 2rem ;
+}
+.personal-info div {
+    margin-block: 1rem;
+}
+.personal-info input {
+    display: block;
+    width: 100%;
+    height: 3rem;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 1rem;
+    margin: .4rem 0;
+}
+.personal-info .buttons button {
+    position: relative;
+    left: 70%;
+}
+.plans {
+    margin: 3rem 0;
+    display: flex;
+    gap: 1rem;
+}.plan {
+    padding: 1rem;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    width: 120px;
+}
+.plan img {
+    margin-bottom: 2rem;
+}
+
+.free {
+    visibility: hidden;
+    font-size: .8rem;
+    margin-top: .3rem;
+}
+.duration {
+    display: flex;
+    justify-content: center;
+    background-color: hsl(206, 94%, 87%);
+    padding-block: .7rem;
+    border-radius: 3px;
+}
+.switcher {
+    width: 40px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    margin-inline: 1rem;
+}
+.switcher div {
+    background-color: #fff;
+    width: 20px;
+    height: 18px;
+    border-radius: 50%;
+    transition: all .4s;
+}
+.yearly {
+    margin-left: 15px;
+}
+.service {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid blue;
+    border-radius: 5px;
+    margin-block: 1rem;
+    padding: 1.2rem;
+}
+.service p:first-of-type {
+    font-weight: bold;
+    margin-bottom: .26rem;
+}
+.summary {
+    background-color: gray;
+    padding: 1rem;
+    border-radius: .5rem;
+    margin: 1.5rem 0;
+}
+.summary > div,
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.23rem 0;
+}
+hr {
+    margin: 1rem 0;
+    background-color: lightgrey;
+}
+.buttons {
+ padding-top: 30px;
+ display: flex;  
+ justify-content: space-between;
+}
+button {
+    border: none;
+    padding: 1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+.gratitude img {
+    width: 30px;
+}
+.gratitude {
+    text-align: center;
+    margin: auto;
+}
+@media  screen and (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        background-color: hsl(206, 94%, 87%);
+    }
+    .sidebar {
+        background: url('assets/images/bg-sidebar-mobile.svg') no-repeat center center / cover;
+        border-radius: 0;
+        width: 100%;
+    }
+    .steps {
+        display: flex;
+        justify-content: center;
+    }
+    .steps li {
+        margin-inline: .8rem;
+    }
+    .text {
+        display: none;
+    }
+    form {
+        background-color: #fff;
+        width: 90%;
+        border-radius: 6px;
+        margin: auto;
+        position: relative;
+        top: -220px;
+        padding: 2rem;
+    }
+    .buttons {
+        position: fixed;
+        left: 20px;
+        right: 20px;
+        bottom: 0;
+    }
+    .plans {
+        flex-direction: column;
+    }
+    .plan {
+        display: flex;
+        align-items: center;
+        margin: 1rem;
+        padding: .5rem;
+        width: initial;
+    }
+    .plan div {
+        margin-left: 1rem;
+        font-size: .9rem;
+    }
+
+}
